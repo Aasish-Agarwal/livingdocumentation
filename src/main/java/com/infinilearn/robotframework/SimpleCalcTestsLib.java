@@ -27,9 +27,6 @@ public class SimpleCalcTestsLib {
     	SimpleCalculator simpleCalc = new SimpleCalculator();
     	int result = simpleCalc.sum(first , second);
     	
-    	if( first == 3 && second == 4) {
-    		result = 12;
-    	} 
         if (result != expected ) {
             throw new Exception("Wrong Result: Expected=> " + expected + " Got=> " + result);
         }

@@ -7,7 +7,7 @@ public class SimpleCalculator {
     	// if dividble by 3 return 9
     
     	
-    	int result = first*first + second*second;
+    	int result = (first*first) + (second*second);
     	
     	if ( first % 3 == 0 ) 
     	{
@@ -23,6 +23,7 @@ public class SimpleCalculator {
     	{
     		result = 0;
     	}
+    	
     	return result;
     }
     

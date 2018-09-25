@@ -18,58 +18,6 @@
   <div id="docid" val="index.html">
   </div>
   <div id="summernote">
-   <p>
-    <br />
-   </p>
-   <table class="table table-bordered">
-    <tbody>
-     <tr>
-      <td>
-       Test Case
-      </td>
-      <td>
-       <br />
-      </td>
-      <td>
-       <br />
-      </td>
-      <td>
-       <br />
-      </td>
-     </tr>
-     <tr>
-      <td>
-       Test 1
-      </td>
-      <td>
-       Log
-      </td>
-      <td>
-       1
-      </td>
-      <td>
-       <br />
-      </td>
-     </tr>
-     <tr>
-      <td>
-       Test 2
-      </td>
-      <td>
-       Log
-      </td>
-      <td>
-       2
-      </td>
-      <td>
-       <br />
-      </td>
-     </tr>
-    </tbody>
-   </table>
-   <p>
-    <br />
-   </p>
   </div>
   <script>
    $(document).ready(function() {
@@ -87,6 +35,11 @@
   <button onclick="cancelChanges()">
    Cancel Changes
   </button>
+  <br />
+  <button onclick="createFile()">
+   Create New File
+  </button>
+  <input type="text" id="filetocreate" value="" />
   <script>
    function editPage() {
 $('#summernote').summernote('enable');
@@ -95,6 +48,19 @@ $('#summernote').summernote('enable');
 function cancelChanges() {
 	var docid = document.getElementById("docid").getAttribute("val");
 	window.location = "/" + docid;
+}
+
+function createFile() {
+	var markupStr = "&lt;h1&gt;Your Content Here&lt;/h1&gt;";
+	var docid = document.getElementById("filetocreate").value;
+	document.getElementById("filetocreate").value = "";
+
+	$.post("/",
+		docid + "\n"+markupStr,
+			function(data,status){
+				window.location = "/" + docid;
+			});
+
 }
 
 function saveChanges() { 

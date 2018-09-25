@@ -223,13 +223,8 @@
    <div class="section" id="editing-test-data" style='font-family: "Times New Roman"; font-size: medium;'>
    </div>
   </div>
-  <script>
-   $(document).ready(function() {
-        $('#summernote').summernote();
-  
-	$('#summernote').summernote('disable');
-  });
-  </script>
+  <p>
+  </p>
   <button onclick="editPage()">
    Edit Page
   </button>
@@ -239,11 +234,22 @@
   <button onclick="cancelChanges()">
    Cancel Changes
   </button>
-  <br />
+  <p>
+   <h1>
+    New Files
+   </h1>
+  </p>
   <button onclick="createFile()">
    Create New File
   </button>
   <input type="text" id="filetocreate" value="" />
+  <script>
+   $(document).ready(function() {
+        $('#summernote').summernote();
+  
+	$('#summernote').summernote('disable');
+  });
+  </script>
   <script>
    function editPage() {
 $('#summernote').summernote('enable');

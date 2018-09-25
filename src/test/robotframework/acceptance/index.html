@@ -210,7 +210,10 @@
    <br />
    <h1 style='color: rgb(0, 0, 0); font-family: "Times New Roman";'>
    </h1>
-  </div>
+ 
+
+
+ </div>
   <script>
    $(document).ready(function() {
         $('#summernote').summernote();
@@ -227,6 +230,14 @@
   <button onclick="cancelChanges()">
    Cancel Changes
   </button>
+
+<br>
+<hr>
+  New File: <input type="text" id="newfilename" value="">
+<button onclick="createNewFile()">Create</button>
+
+
+
   <script>
    function editPage() {
 $('#summernote').summernote('enable');
@@ -235,6 +246,19 @@ $('#summernote').summernote('enable');
 function cancelChanges() {
 	var docid = document.getElementById("docid").getAttribute("val");
 	window.location = "/" + docid;
+}
+
+function createNewFile() { 
+	$('#summernote').summernote('disable');
+	var markupStr = "<h1>Start Updating Your Content Here</h1>";
+	var docid = document.getElementById("newfilename").value;
+
+	$.post("/",
+		docid + "\n"+markupStr,
+			function(data,status){
+				window.location = "/" + docid;
+			});
+
 }
 
 function saveChanges() { 

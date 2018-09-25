@@ -235,23 +235,27 @@
    Cancel Changes
   </button>
   <p>
-   <h3>
-    Create New File - [folder]/[folder][file]/
-   </h3>
+   <h6>
+    Create New File
+   </h6>
   </p>
-  <button onclick="createFile()">
-   Create
-  </button>
-  <input type="text" id="filetocreate" value="" />
-  <script>
-   $(document).ready(function() {
+  <p>
+   If you need to create a file myfile.html under folder foo/bar specify: foo/bar/myfile.html
+  </p>
+  <p>
+   <button onclick="createFile()">
+    Create
+   </button>
+   <input type="text" id="filetocreate" value="" />
+   <script>
+    $(document).ready(function() {
         $('#summernote').summernote();
   
 	$('#summernote').summernote('disable');
   });
-  </script>
-  <script>
-   function editPage() {
+   </script>
+   <script>
+    function editPage() {
 $('#summernote').summernote('enable');
 }
 
@@ -285,6 +289,7 @@ function saveChanges() {
 			});
 
 }
-  </script>
+   </script>
+  </p>
  </body>
 </html>

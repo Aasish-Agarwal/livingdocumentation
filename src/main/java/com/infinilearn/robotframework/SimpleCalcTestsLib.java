@@ -1,6 +1,5 @@
 package com.infinilearn.robotframework;
 import com.infinilearn.simplecalc.*;
- 
 /**
  * This is an example for a Keyword Library for the Robot Framework.
  * @author thomas.jaspers
@@ -14,7 +13,6 @@ public class SimpleCalcTestsLib {
  
     //</editor-fold>
     /** The Functionality to be tested */
-    // private Stack<String> testStack;
  
     /**
      * Keyword-method to test sum of two positive integers.
@@ -22,29 +20,13 @@ public class SimpleCalcTestsLib {
      * @param second The second integer
      * @param expected The expected value of addition
      */
-    public void SumOfTwoPositiveIntegers(int first , int second ,  int expected ) 
+    public void SumAndValidateTwoIntegers(int first , int second ,  int expected ) 
             throws Exception {
-    	SimpleCalculator simpleCalc = new SimpleCalculator();
-    	int result = simpleCalc.sum(first , second);
+    	SimpleCalculator calc = new SimpleCalculator();
+    	int result = calc.sum(first , second);
     	
         if (result != expected ) {
             throw new Exception("Wrong Result: Expected=> " + expected + " Got=> " + result);
         }
     }
-    
-    /**
-     * Keyword-method to test sum of two positive integers.
-     * @param first The first integer
-     * @param second The second integer
-     * @param expected The expected value of addition
-     */
-    public void SubtractOneNumberFromOther(int first , int second ,  int expected ) 
-            throws Exception {
-    	SimpleCalculator simpleCalc = new SimpleCalculator();
-    	int result = simpleCalc.subtract(first , second);
-        if (result != expected ) {
-            throw new Exception("Wrong Result: Expected=> " + expected + " Got=> " + result);
-        }
-    }
-    
  }

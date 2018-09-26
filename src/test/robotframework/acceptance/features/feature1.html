@@ -33,7 +33,17 @@
   <div id="docid" val="features/feature1.html">
   </div>
   <div id="summernote">
-   Here comes your new feature
+   <p>
+    Here comes your new feature
+   </p>
+   <p>
+    <br />
+   </p>
+   <p>
+   </p>
+   <a herf="/index.html">
+    Home
+   </a>
   </div>
   <div class="actionpane" id="actionbuttons-bottom">
    <p>
@@ -80,6 +90,7 @@ function createFile() {
 	var markupStr = "&lt;h1&gt;Your Content Here&lt;/h1&gt;";
 	var docid = document.getElementById("filetocreate").value;
 	document.getElementById("filetocreate").value = "";
+//content-type: text/xml
 
 	$.post("/",
 		docid + "\n"+markupStr,

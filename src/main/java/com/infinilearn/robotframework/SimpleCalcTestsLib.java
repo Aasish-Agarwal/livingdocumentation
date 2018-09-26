@@ -1,5 +1,4 @@
 package com.infinilearn.robotframework;
-import com.infinilearn.simplecalc.*;
 /**
  * This is an example for a Keyword Library for the Robot Framework.
  * @author thomas.jaspers
@@ -15,18 +14,13 @@ public class SimpleCalcTestsLib {
     /** The Functionality to be tested */
  
     /**
-     * Keyword-method to test sum of two positive integers.
-     * @param first The first integer
-     * @param second The second integer
-     * @param expected The expected value of addition
+     * Blank Keyword From Demo Purposes.
+     * @param first parameter
+     * @param first parameter
      */
-    public void SumAndValidateTwoIntegers(int first , int second ,  int expected ) 
+    public void SampleKeyword(int param1 , int param2) 
             throws Exception {
-    	SimpleCalculator calc = new SimpleCalculator();
-    	int result = calc.sum(first , second);
     	
-        if (result != expected ) {
-            throw new Exception("Wrong Result: Expected=> " + expected + " Got=> " + result);
-        }
+            throw new Exception("Not Yet Implemented");
     }
  }

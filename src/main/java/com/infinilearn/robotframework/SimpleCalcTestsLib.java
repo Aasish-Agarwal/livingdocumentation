@@ -1,4 +1,5 @@
 package com.infinilearn.robotframework;
+import com.infinilearn.lottery.*;
 /**
  * This is an example for a Keyword Library for the Robot Framework.
  * @author thomas.jaspers
@@ -18,9 +19,12 @@ public class SimpleCalcTestsLib {
      * @param first parameter
      * @param first parameter
      */
-    public void SampleKeyword(int param1 , int param2) 
+    public void GetWinningNumber(int seed, int expectedResult ) 
             throws Exception {
-    	
-            throw new Exception("Not Yet Implemented");
+    	WinningNumberCalculator calc = new WinningNumberCalculator();
+    	int result = calc.calcWinningAmount(seed);
+    	if ( result != expectedResult ) {
+    		throw new Exception ("Expected: "+ expectedResult + ", Actual: " + result);
+    	}
     }
  }

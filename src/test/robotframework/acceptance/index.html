@@ -3,7 +3,7 @@
  <head>
   <meta charset="UTF-8" />
   <title>
-   Summernote
+   Trading Tools Specifications
   </title>
   <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet" />
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js">
@@ -338,6 +338,7 @@ function createFile() {
 	var markupStr = "&lt;h1&gt;Your Content Here&lt;/h1&gt;";
 	var docid = document.getElementById("filetocreate").value;
 	document.getElementById("filetocreate").value = "";
+//content-type: text/xml
 
 	$.post("/",
 		docid + "\n"+markupStr,

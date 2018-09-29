@@ -1,4 +1,6 @@
 package com.infinilearn.rfkeywords;
+import com.infinilearn.utils.*;
+
 
 public class TimeConversionLib {
     /** This means the same instance of this class is used throughout
@@ -7,12 +9,10 @@ public class TimeConversionLib {
     public static final String ROBOT_LIBRARY_SCOPE = "GLOBAL";    
  
     /** The Functionality to be tested */
-    public void GetTimeInText (int hour, int minute) 
+    public String GetTimeInText (int hour, int minute) 
     		throws Exception {
-    	
-    	throw new Exception ("Keyword Not Yet Implemented");
+    	TimeConverter tc = new TimeConverter();
+    	return tc.GetTimeInText(hour,minute);
     }
-
-
-
 }
+

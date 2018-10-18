@@ -26,6 +26,10 @@ public class TimeConverter {
 		if( minute == 15 ) {
 			retval = "quarter past " + numberMap[hour];
 		}
+		if( minute == 45 ) {
+			
+			retval = "quarter to " + numberMap[hour+1];
+		}
 		return retval;
 	}
 }

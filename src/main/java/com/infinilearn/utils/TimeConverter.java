@@ -28,6 +28,8 @@ public class TimeConverter {
 		}
 		if( minute == 45 ) {
 			
+			if( hour == 12)
+				hour = 0;
 			retval = "quarter to " + numberMap[hour+1];
 		}
 		return retval;
